@@ -1,0 +1,11 @@
+  body {
+  background: #eee;
+  font-weight: 300 !important;
+}
+
+@import '../../mx_modules/mx_common/src/client/css/main.scss';
+@import 'components/_capsuling.scss';
+@import 'components/_capsuling_selection.scss';
+@import 'components/_capsuling_brands.scss';
+@import 'components/_capsuling_profile.scss';
+  @import 'components/_capsuling_results.scss';

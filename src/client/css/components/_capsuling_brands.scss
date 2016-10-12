@@ -1,0 +1,49 @@
+#capsuling-brands {
+  section {
+    @include display-flex(column);
+    @include align-items(center);
+    width: 100%;
+    padding: 0 $spacing-normal $spacing-normal $spacing-normal;
+    width: 100%;
+    margin-bottom: 0;
+
+    .checkbox-group {
+      display: inline-block;
+      .checkbox {
+        @include display-flex(column);
+        @include align-items(center);
+        margin: rem-calc(26) 0 0 0;
+        padding: 0;
+        width: rem-calc(130);
+        label {
+          width: rem-calc(130);
+          display: table-cell;
+          vertical-align: middle;
+          cursor: pointer;
+          margin: 0;
+          color: $font-color-grey-5;
+          border: 1px solid white;
+          @include display-flex(column);
+          @include align-items(center);
+          img {
+            width: rem-calc(90);
+            height: rem-calc(90);
+            outline: 1px solid $font-color-grey-0a;
+          }
+          input[type=checkbox] {
+            position: absolute;
+            opacity: 0;
+          }
+        }
+        &.checked {
+          border: none;
+          label {
+            img {
+              outline: 2px solid $font-color-grey-2;
+            }
+          }
+        }
+      }
+    }
+  }
+}

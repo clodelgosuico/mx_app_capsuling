@@ -1,0 +1,103 @@
+@mixin green-checkmark($width, $height, $margin-left) {
+  content: '';
+  background: url('/images/capsuling/icon_check.png') top right no-repeat;
+  background-size: cover;
+  width: rem-calc($width);
+  height: rem-calc($height);
+  display: inline-block;
+  margin-left: rem-calc($margin-left);
+}
+
+
+#capsuling-selection {
+  section {
+    @include display-flex(column);
+    @include align-items(center);
+    width: 100%;
+    padding: 0 $spacing-normal $spacing-normal $spacing-normal;
+    margin-bottom: rem-calc(22);
+
+    h2.category-name {
+      border-bottom: 1px solid $font-color-grey-1;
+      line-height: rem-calc(25);
+      width: 100%;
+      margin-top: rem-calc(40);
+      text-align: left;
+      text-transform: capitalize;
+    }
+
+    section {
+      width: 100%;
+      margin-bottom: 0;
+      .checkbox-group {
+        display: inline-block;
+        width: 100%;
+        .checkbox {
+          @include display-flex(column);
+          @include align-items(center);
+          margin: rem-calc(26) 0 0 0;
+          padding: 0;
+          label {
+            width: rem-calc(220);
+            display: table-cell;
+            vertical-align: middle;
+            cursor: pointer;
+            margin: 0;
+            color: $font-color-grey-5;
+            @include display-flex(column);
+            @include align-items(center);
+            img {
+              width: rem-calc(110);
+              height: rem-calc(110);
+              opacity: 0.5;
+            }
+            span {
+              text-align: center;
+              display: inline-block;
+              font-size: $font-size-normal;
+              margin-top: rem-calc(5);
+              &:before {
+                content: '';
+                width: rem-calc(17);
+                height: rem-calc(1);
+                display: inline-block;
+                margin-right: rem-calc(10);
+              }
+              &:after {
+                content: '';
+                width: rem-calc(17);
+                height: rem-calc(1);
+                display: inline-block;
+                margin-left: rem-calc(10);
+              }
+            }
+            input[type=checkbox] {
+              position: absolute;
+              opacity: 0;
+            }
+          }
+          &.checked {
+            label {
+              span {
+                &:after {
+                  @include green-checkmark(17, 17, 10);
+                }
+              }
+              img {
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .button-group {
+    position: static;
+    li {
+      .next-button, .prev-button{
+        margin-top:0;
+      }
+    }
+  }
+}

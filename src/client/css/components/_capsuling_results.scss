@@ -1,0 +1,50 @@
+#capsuling-results {
+  margin-bottom: $spacing-normal;
+  .clothing-category {
+    margin-bottom: 0;
+    .clothing-group {
+      @include display-flex(row);
+      line-height: rem-calc(19);
+      ul.debug {
+        list-style-type: none;
+      }
+      max-width: inherit;
+      margin-top: $spacing-normal;
+      .clothing-group-icon {
+        width: rem-calc(110);
+        margin: 0 auto;
+      }
+      .name {
+        margin-top: $spacing-micro;
+      }
+      .product-thumbnail-carousel {
+        .slider-frame {
+          margin: 0 auto !important;
+          width: 85%;
+        }
+      }
+      .colors {
+        list-style-type: none;
+        @include display-flex(row);
+        @include justify-content(center);
+        margin: $spacing-small 0 0 0;
+        li {
+          border-radius: rem-calc(17);
+          border: rem-calc(1) solid #ccc;
+          width: rem-calc(34);
+          height: rem-calc(34);
+          margin: 0 $spacing-small;
+          span {
+            display: none;
+          }
+        }
+      }
+      .clothing-group-info, .capsuling-products {
+        @include display-flex(column);
+        @include justify-content(center);
+        @include align-self(center);
+        padding: 0;
+      }
+    }
+  }
+}

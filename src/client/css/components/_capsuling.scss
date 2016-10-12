@@ -1,0 +1,478 @@
+#capsule-info-page {
+  width: 100%;
+  left: 0px;
+  padding: 0 !important;
+
+  #section-1 {
+    background: url('/images/capsuling/Capuling_MVP_d_hero_Image.jpg');
+    background-size: cover;
+    background-position: 19% center;
+    h3 {
+      color: $font-color-grey-5;
+      font-weight: $font-weight-light;
+      line-height: rem-calc(32);
+      font-size: rem-calc(60);
+      margin: 0;
+      letter-spacing: rem-calc(1);
+
+      @media #{$mobile} {
+        font-size: rem-calc(32);
+      }
+    }
+
+    h4 {
+      color: $font-color-grey-5;
+      font-weight: $font-weight-medium;
+      line-height: 1;
+      font-size: rem-calc(56);
+      margin: 0;
+      letter-spacing: rem-calc(1);
+
+      @media #{$mobile} {
+        font-size: rem-calc(32);
+      }
+    }
+
+    h5 {
+      color: $font-color-grey-4;
+      margin-top: rem-calc(35);
+      font-weight: $font-weight-thin;
+      line-height: rem-calc(28);
+      font-size: rem-calc(28);
+      letter-spacing: 0.0625rem;
+
+    }
+
+    p {
+      line-height: rem-calc(20);
+      margin-top: 0;
+      margin-bottom: 0;
+      color: $font-color-grey-4;
+      span {
+        white-space: nowrap;
+        overflow: hidden;
+      }
+    }
+
+
+    .button {
+      margin-top: $spacing-large;
+    }
+
+    .full {
+      height: 100%;
+      @include display-flex(column);
+      @include justify-content(flex-start);
+      .mobile-image-container {
+        display: none;
+      }
+      .text-container {
+        width: 38%;
+        @include align-self(flex-end);
+        letter-spacing: rem-calc(1);
+        margin-top: 16%;
+      }
+    }
+  }
+  #section-2 {
+    @include display-flex(column);
+    padding-top: $spacing-large;
+    h3 {
+      color: $font-color-grey-5;
+      @include align-self(center);
+      font-weight: lighter;
+      font-style: italic;
+      font-size: $font-size-jumbotron;
+      letter-spacing: rem-calc(1);
+      padding-bottom: rem-calc(5);
+    }
+    .steps {
+      @include display-flex(column);
+      .text-container {
+        padding: 7% $spacing-large;
+        @include display-flex(row);
+        @include align-items(center);
+        span.number {
+          display: block;
+          float: left;
+          font-size: rem-calc(100);
+          font-style: italic;
+          line-height: rem-calc(100);
+          margin-right: $spacing-normal;
+          color: $font-color-grey-1;
+        }
+        h5 {
+          font-weight: $font-weight-light;
+          color: $font-color-grey-4;
+          font-size: $font-size-large;
+          letter-spacing: rem-calc(1);
+        }
+        p {
+          line-height: rem-calc(18);
+          font-size: $font-size-normal;
+          letter-spacing: rem-calc(.6);
+          padding-top: rem-calc(2);
+        }
+      }
+      .image-container {
+        background-size: cover;
+        background-position: center center;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      ul {
+        @include align-self(center);
+        width: 80%;
+        @include display-flex(row);
+        border-bottom: 1px solid $font-color-grey-1;
+        max-width: rem-calc(1200);
+      }
+      #step-1 {
+        margin-top: $spacing-large;
+      }
+      #step-2 {
+
+        .text-container {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+  #last-month-products {
+    position: relative;
+    max-width:rem-calc(1024);
+    margin:auto;
+    padding-top: $spacing-large *2;
+    border-bottom: 1px solid $font-color-grey-1;
+
+    h1 {
+      text-align: center;
+      font-size: $font-size-jumbotron;
+      color: $font-color-grey-4;
+      font-weight: $font-weight-thin;
+      font-style: italic;
+    }
+
+    h2 {
+      text-align: center;
+      font-weight: $font-weight-thin;
+      color: $font-color-grey-4;
+      font-size: $font-size-normal;
+    }
+
+    ul {
+      max-height: rem-calc(700);
+      button {
+        @include vendor-prefix(transform, translate3d(0,0,0));
+      }
+      li {
+        .product-info {
+          border: none;
+          box-shadow: none;
+          .product-info-details {
+            display: none;
+          }
+        }
+
+        .product-info:hover, .product-info.product-info-touched {
+          .product-info-details {
+            @include display-flex(column);
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            align-items: center;
+            background-color: rgba(255, 255, 255, .86);
+            padding-left: 5px;
+            padding-right: 5px;
+
+            .product-prices-container {
+              margin-bottom: 20px;
+
+              .prices {
+                text-align: center;
+                .original-price, .price {
+                  font-size: $font-size-large;
+                  display: block;
+                }
+              }
+            }
+
+            .product-name {
+              text-align: center;
+              padding: 40px 30px 0px 30px;
+            }
+          }
+        }
+      }
+    }
+
+
+    .slick-slider {
+      .slick-dots {
+        position: relative;
+        bottom: rem-calc(-40);
+        margin-bottom:$spacing-large * 2;
+      }
+    }
+
+    .banner {
+      display:none;
+    }
+  }
+
+  #subscription-closed {
+    @include display-flex(column);
+    h2 {
+      font-weight: 300;
+      color: $font-color-grey-4;
+      font-size: $font-size-large;
+      letter-spacing: rem-calc(1);
+    }
+    #signup-form {
+      @include align-self(center);
+      padding: rem-calc(40) 0 rem-calc(10) 0;
+      width: rem-calc(302);
+      text-align: center;
+
+      p {
+        letter-spacing: rem-calc(.6);
+        margin-bottom:rem-calc(25);
+      }
+      button {
+        margin-top: rem-calc(30);
+        margin-bottom: rem-calc(30);
+      }
+
+
+      .form-fields {
+        padding-top: $spacing-normal;
+      }
+    }
+    .goto-myspotlight-section {
+      text-align:center;
+      margin-top: rem-calc(30);
+      margin-bottom:rem-calc(25);
+      p {
+        display:inline-block;
+        text-decoration: underline;
+      }
+    }
+    .disclaimer {
+      font-size: rem-calc(12);
+      color: $font-color-grey-1;
+      letter-spacing: rem-calc(2);
+      padding-bottom:rem-calc(10);
+      text-align:center;
+    }
+  }
+  #subscription-open {
+    @include display-flex(row);
+    .button {
+      margin: $spacing-large auto;
+    }
+  }
+  #for-members {
+    @include display-flex(column);
+    @include align-items(center);
+    margin: rem-calc(60) 0;
+    h1 {
+      color: $font-color-grey-4;
+      margin-bottom: 0;
+    }
+    p {
+      color: $font-color-grey-4;
+    }
+  }
+}
+
+@media #{$mobile} {
+  #capsule-info-page {
+    margin-top: rem-calc(47) !important;
+    #section-1 {
+      background: none;
+      h3 {
+        @include align-self(center);
+        font-size: $font-size-jumbotron;
+      }
+      h4 {
+        @include align-self(center);
+        font-size: $font-size-jumbotron;
+      }
+      .full {
+        .mobile-image-container {
+          display: block;
+        }
+        .text-container {
+          margin-top: rem-calc(80);
+          text-align:center;
+          width: 100%;
+          @include align-self(center);
+          padding: 0 $spacing-normal;
+          @include display-flex(column);
+          br {
+            display: none;
+          }
+          .button {
+            display:none;
+          }
+        }
+      }
+    }
+    #section-2 {
+      .steps #step-1 {
+        margin-top:0;
+      }
+      padding-top:rem-calc(100);
+      h4 {
+        font-size: rem-calc(30);
+      }
+      .steps {
+        ul {
+          @media (orientation: portrait) {
+            width: 80%;
+          }
+          @media (orientation: landscape) {
+            width: 59%;
+          }
+          @include display-flex(column);
+        }
+        .text-container {
+          padding: $spacing-normal 0 0 0;
+          width: 100%;
+        }
+        .image-container {
+          width: 100%;
+          padding:0;
+        }
+
+        #step-2{
+          .image-container{
+            order: 2;
+          }
+        }
+      }
+    }
+    #subscription-closed {
+      #signup-form {
+        p {
+          margin-bottom:rem-calc(10);
+        }
+        h2 {
+          line-height: 24px;
+        }
+        max-width:400px;
+        width:80%;
+        margin: 0 auto;
+        padding-left: $spacing-normal;
+        padding-right: $spacing-normal;
+        button {
+          width: 100%;
+        }
+
+        #reCaptcha {
+          @media #{$mobile} {
+            @include display-flex(row);
+            @include justify-content(center);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 600px) and (max-width: 768px) and (orientation: portrait) {
+  #spotlight-survey {
+    width: 100%;
+    .page {
+      max-width: rem-calc(470);
+      margin: 0 auto;
+      height: auto;
+      h1 {
+        font-size: rem-calc(36);
+      }
+      .rating-scale {
+        .scale-labels {
+          &.bottom-labels {
+            display: none;
+          }
+          .high {
+            visibility: visible;
+          }
+        }
+      }
+    }
+    .page-2 {
+      h1 {
+        max-width: rem-calc(269);
+      }
+    }
+    .page-4 {
+      h1 {
+        max-width: none;
+      }
+    }
+    .survey-buttons {
+      max-width: rem-calc(470);
+      margin: 0 auto;
+    }
+    .page-progress {
+      hr {
+        margin: $spacing-normal auto;
+        width: 90%;
+      }
+      h1 {
+        font-size: rem-calc(30);
+        margin-bottom: $spacing-small;
+      }
+      .info {
+        display: block;
+      }
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 400px) and (orientation: portrait) {
+  #capsule-info-page #section-1 {
+    text-align: center;
+    p {
+      font-size: rem-calc(15);
+      line-height: rem-calc(16);
+    }
+    h5 {
+      font-size:$font-size-small;
+      line-height:$font-size-large;
+    }
+  }
+}
+
+@media (min-width: 414px) and (max-width: 769px) and (orientation: portrait) {
+  #capsule-info-page {
+    #section-2 .steps ul {
+      width: 80%;
+      max-width: 400px;
+    }
+
+    #section-1 .text-container {
+      h3 {
+        padding-top:rem-calc(25);
+      }
+      background-color:#fff;
+    }
+  }
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  #capsule-info-page {
+    #section-1 .text-container {
+      h5 {
+        font-size:26px;
+      }
+
+    }
+  }
+}
